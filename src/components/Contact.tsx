@@ -1,17 +1,16 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useForm } from 'react-hook-form';
+import emailjs from 'emailjs-com';
 import { 
   Mail, 
   Phone, 
   MapPin, 
   Send, 
-  Calendar,
-  MessageCircle,
-  Linkedin,
-  Twitter,
-  Instagram,
-  Youtube
+  Linkedin, 
+  Twitter, 
+  Instagram, 
+  Youtube 
 } from 'lucide-react';
 
 interface FormData {
@@ -80,13 +79,27 @@ const Contact = () => {
     setSubmitStatus('idle');
 
     try {
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 2000));
-      
-      console.log('Form submitted:', data);
+    const serviceID = "service_5rshmpy";
+const templateID = "template_bhlddtd";
+const publicKey = "l7-pyfdAh_QQwrKBt";
+
+
+      const templateParams = {
+        from_name: data.name,
+        from_email: data.email,
+        company: data.company,
+        service: data.service,
+        budget: data.budget,
+        message: data.message
+      };
+
+      await emailjs.send(serviceID, templateID, templateParams, publicKey);
+
+      console.log('Email sent successfully:', data);
       setSubmitStatus('success');
       reset();
     } catch (error) {
+      console.error('Email sending error:', error);
       setSubmitStatus('error');
     } finally {
       setIsSubmitting(false);
@@ -197,23 +210,6 @@ const Contact = () => {
                       <p className="text-red-400 text-sm mt-1">{errors.service.message}</p>
                     )}
                   </div>
-
-                  <div>
-                    <label htmlFor="budget" className="block text-sm font-medium text-gray-300 mb-2">
-                      Budget Range
-                    </label>
-                    <select
-                      {...register('budget')}
-                      className="w-full px-4 py-3 bg-slate-900/50 border border-slate-600/50 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
-                    >
-                      <option value="">Select budget range</option>
-                      {budgetRanges.map((range) => (
-                        <option key={range} value={range}>
-                          {range}
-                        </option>
-                      ))}
-                    </select>
-                  </div>
                 </div>
 
                 <div>
@@ -279,9 +275,8 @@ const Contact = () => {
             viewport={{ once: true }}
             className="space-y-8"
           >
-            {/* Contact Info Cards */}
             <div className="space-y-6">
-              {contactInfo.map((info, index) => (
+              {contactInfo.map((info) => (
                 <motion.a
                   key={info.title}
                   href={info.action}
@@ -299,7 +294,6 @@ const Contact = () => {
               ))}
             </div>
 
-            {/* Social Links */}
             <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-3xl p-8">
               <h4 className="text-xl font-bold text-white mb-6">
                 Follow Our Journey

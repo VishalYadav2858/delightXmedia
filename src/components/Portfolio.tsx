@@ -2,57 +2,72 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { ExternalLink, Play, TrendingUp, Users, Eye } from 'lucide-react';
 
+import harshitImg from "../assets/harshit.jpg";
+
+
+
+
+
+
 const Portfolio = () => {
   const projects = [
     {
       id: 1,
-      title: 'TechReview Pro',
+      title: 'Harshit Chauhan',
       category: 'YouTube Channel',
-      description: 'Transformed a tech review channel from 10K to 500K subscribers in 8 months',
+      description: 'Transformed a tech review channel from 10K to 40K subscribers in 8 months',
       image: 'https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg',
+      link: "https://www.youtube.com/@HarshitChauhan21",
       stats: {
-        views: '25M+',
-        subscribers: '500K+',
-        growth: '+4900%'
-      },
-      services: ['Video Editing', 'Thumbnail Design', 'SEO Optimization']
-    },
-    {
-      id: 2,
-      title: 'FashionForward',
-      category: 'Brand Campaign',
-      description: 'Multi-platform influencer campaign generating 15M+ impressions',
-      image: 'https://images.pexels.com/photos/2887718/pexels-photo-2887718.jpeg',
-      stats: {
-        views: '15M+',
-        engagement: '8.5%',
-        reach: '3M+'
+        views: '35M+',
+        subscribers: '40K+',
+        growth: '+490%'
       },
       services: ['Influencer Management', 'Content Strategy', 'Brand Partnerships']
     },
     {
-      id: 3,
-      title: 'GameZone Elite',
-      category: 'Gaming Channel',
-      description: 'Complete rebrand and growth strategy for gaming content creator',
-      image: 'https://images.pexels.com/photos/442576/pexels-photo-442576.jpeg',
+      id: 2,
+      title: 'Atharva Aggarwal',
+      category: 'Youtube Channel',
+      description: 'Multi-platform influencer campaign generating 15M+ impressions',
+      image: 'https://images.pexels.com/photos/2887718/pexels-photo-2887718.jpeg',
+      link: "https://www.youtube.com/@AtharvaAggarwal",
+
       stats: {
-        views: '40M+',
-        subscribers: '800K+',
+        views: '50M+',
+        subscribers: '330k+',
+        reach: '3M+'
+      },
+      services: ['Video Editing', 'Thumbnail Design', 'SEO Optimization','Brand Deals']
+    },
+    {
+      id: 3,
+      title: 'Doctor Ani',
+      category: 'Education Channel',
+      description: 'Complete rebrand and growth strategy for Ecxam preparation',
+      
+      image: 'https://images.pexels.com/photos/442576/pexels-photo-442576.jpeg',
+      link: "https://www.youtube.com/@DoctorAniGoa",
+
+      stats: {
+        views: '4M+',
+        subscribers: '15K+',
         revenue: '+300%'
       },
       services: ['Video Editing', 'Brand Development', 'Monetization Strategy']
     },
     {
       id: 4,
-      title: 'LifestyleLuxe',
-      category: 'Lifestyle Brand',
+      title: 'Parth Goyal',
+      category: 'Education',
       description: 'End-to-end content creation and brand partnership management',
       image: 'https://images.pexels.com/photos/1181265/pexels-photo-1181265.jpeg',
+      link: "https://www.youtube.com/@ParthGoyal",
+
       stats: {
-        campaigns: '50+',
+        views: '330M+',
         brands: '25+',
-        revenue: '$500K+'
+        revenue: '+500%+'
       },
       services: ['Content Creation', 'Brand Deals', 'Performance Analytics']
     }
@@ -60,9 +75,9 @@ const Portfolio = () => {
 
   const testimonials = [
     {
-      name: 'Alex Thompson',
+      name: 'Harshit Chauhan',
       role: 'Content Creator',
-      company: 'TechReview Pro',
+      company: 'Education & Lifestyle',
       content: 'DelightxMedia transformed my channel beyond my wildest dreams. Their strategic approach and creative expertise took me from struggling creator to YouTube success story.',
       avatar: 'AT'
     },
@@ -124,14 +139,7 @@ const Portfolio = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/20 to-transparent" />
                 
                 {/* Play Button Overlay */}
-                <motion.div
-                  className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                  whileHover={{ scale: 1.1 }}
-                >
-                  <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center border border-white/30">
-                    <Play className="w-6 h-6 text-white ml-1" />
-                  </div>
-                </motion.div>
+                
               </div>
 
               {/* Content */}
@@ -140,7 +148,10 @@ const Portfolio = () => {
                   <span className="bg-blue-500/20 text-blue-400 px-3 py-1 rounded-full text-sm font-medium">
                     {project.category}
                   </span>
-                  <ExternalLink className="w-5 h-5 text-gray-400 group-hover:text-blue-400 transition-colors" />
+                <a href={project.link} target="_blank" rel="noopener noreferrer">
+                <ExternalLink className="text-white" />
+                </a>
+
                 </div>
 
                 <h3 className="text-2xl font-bold text-white mb-3">

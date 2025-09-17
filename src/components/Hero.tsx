@@ -8,7 +8,7 @@ const Hero = () => {
   };
 
   const openCalendly = () => {
-    window.open('https://calendly.com/delightxmedia/consultation', '_blank');
+    window.open('https://calendly.com/vishalyadav2858/new-meeting', '_blank');
   };
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -43,11 +43,11 @@ const Hero = () => {
           transition={{ duration: 0.8, delay: 0.4 }}
         >
           <span className="bg-gradient-to-r from-white via-gray-200 to-gray-400 bg-clip-text text-transparent">
-            Elevate Your
+            We Are Talent
           </span>
           <br />
           <span className="bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
-            Digital Presence
+            Crafting Company
           </span>
         </motion.h1>
 

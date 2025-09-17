@@ -27,7 +27,8 @@ const Footer = () => {
     'YouTube Growth',
     'Brand Deals',
     'Content Strategy',
-    'Performance Analytics'
+    'Something Else'
+    
   ];
 
   const socialLinks = [
@@ -85,15 +86,15 @@ const Footer = () => {
               >
                 <div className="flex items-center text-gray-400">
                   <Mail className="w-4 h-4 mr-3 text-blue-400" />
-                  hello@delightxmedia.com
+                  hello@delightxmedia.in
                 </div>
                 <div className="flex items-center text-gray-400">
                   <Phone className="w-4 h-4 mr-3 text-blue-400" />
-                  +1 (555) 123-4567
+                  +91-9867949943
                 </div>
                 <div className="flex items-center text-gray-400">
                   <MapPin className="w-4 h-4 mr-3 text-blue-400" />
-                  Los Angeles, CA
+                  Mumbai, IN
                 </div>
               </motion.div>
             </div>

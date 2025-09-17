@@ -5,7 +5,6 @@ import {
   Users, 
   TrendingUp, 
   Handshake, 
-  ArrowRight,
   Scissors,
   Target,
   BarChart3
@@ -14,31 +13,33 @@ import {
 const Services = () => {
   const services = [
     {
-      icon: Video,
-      title: 'Video Editing',
-      description: 'Professional video editing that captivates audiences and drives engagement across all platforms.',
-      features: ['Motion Graphics', 'Color Grading', 'Sound Design', 'Multi-Platform Optimization'],
-      gradient: 'from-blue-500 to-cyan-500'
-    },
-    {
       icon: Users,
-      title: 'Influencer Management',
-      description: 'End-to-end influencer management services that build authentic connections with your audience.',
-      features: ['Content Strategy', 'Audience Growth', 'Brand Positioning', 'Community Management'],
+      title: 'Influencer Driven Leads',
+      description: 'Influencer Driven Leads helps brands convert authentic creator influence into real business results — not just reach, but engaged audiences who are ready to act.',
+      features: [],
       gradient: 'from-purple-500 to-pink-500'
     },
+
+    {
+      icon: Video,
+      title: 'Talent Management',
+      description: 'Welcome to the beating heart of creator empowerment at delightX. A sanctuary for creators seeking not just management but a transformative experience.',
+      features: [],
+      gradient: 'from-blue-500 to-cyan-500'
+    },
+    
     {
       icon: TrendingUp,
-      title: 'YouTube Growth',
-      description: 'Data-driven strategies to accelerate your YouTube channel growth and maximize monetization.',
-      features: ['SEO Optimization', 'Thumbnail Design', 'Analytics Tracking', 'Monetization Strategy'],
+      title: 'Social media Growth',
+      description: 'Data-driven strategies to accelerate your Brand growth and maximize monetization.',
+      features: [],
       gradient: 'from-green-500 to-emerald-500'
     },
     {
       icon: Handshake,
-      title: 'Brand Deals',
-      description: 'Strategic brand partnerships that align with your values and drive meaningful collaborations.',
-      features: ['Partnership Matching', 'Contract Negotiation', 'Campaign Management', 'Performance Tracking'],
+      title: 'Personal Branding',
+      description: 'Your brand is not confined to a niche; instead, we craft a narrative that spans across various facets of your personality and accomplishments.',
+      features: [],
       gradient: 'from-orange-500 to-red-500'
     }
   ];
@@ -95,7 +96,7 @@ const Services = () => {
           {services.map((service, index) => (
             <motion.div
               key={service.title}
-              className="group relative overflow-hidden bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-3xl p-8 hover:border-slate-600/50 transition-all duration-300"
+              className="group relative overflow-hidden bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-3xl p-6 hover:border-slate-600/50 transition-all duration-300"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
@@ -103,36 +104,28 @@ const Services = () => {
               whileHover={{ scale: 1.02, y: -5 }}
             >
               <div className="relative z-10">
-                <div className={`inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r ${service.gradient} rounded-2xl mb-6`}>
-                  <service.icon className="w-8 h-8 text-white" />
+                <div className={`inline-flex items-center justify-center w-14 h-14 bg-gradient-to-r ${service.gradient} rounded-2xl mb-4`}>
+                  <service.icon className="w-7 h-7 text-white" />
                 </div>
                 
-                <h3 className="text-2xl font-bold text-white mb-4">
+                <h3 className="text-xl font-bold text-white mb-3">
                   {service.title}
                 </h3>
                 
-                <p className="text-gray-400 mb-6 leading-relaxed">
+                <p className="text-gray-400 mb-4 leading-relaxed text-sm">
                   {service.description}
                 </p>
                 
-                <ul className="space-y-3 mb-8">
+                <ul className="space-y-2">
                   {service.features.map((feature) => (
-                    <li key={feature} className="flex items-center text-gray-300">
-                      <div className={`w-2 h-2 bg-gradient-to-r ${service.gradient} rounded-full mr-3`} />
+                    <li key={feature} className="flex items-center text-gray-300 text-sm">
+                      <div className={`w-2 h-2 bg-gradient-to-r ${service.gradient} rounded-full mr-2`} />
                       {feature}
                     </li>
                   ))}
                 </ul>
-                
-                <motion.button
-                  className="group/btn flex items-center text-white font-semibold hover:text-blue-400 transition-colors"
-                  whileHover={{ x: 5 }}
-                >
-                  Learn More
-                  <ArrowRight className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform" />
-                </motion.button>
               </div>
-              
+
               {/* Animated background gradient */}
               <div className={`absolute inset-0 bg-gradient-to-r ${service.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-300`} />
             </motion.div>

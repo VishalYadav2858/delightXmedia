@@ -15,10 +15,10 @@ const Navbar = () => {
   }, []);
 
   const navItems = [
-    { name: 'Home', href: '#home' },
+    { name: 'Home', href: '#' },
     { name: 'About', href: '#about' },
     { name: 'Services', href: '#services' },
-    { name: 'Portfolio', href: '#portfolio' },
+    { name: 'Talents', href: '#portfolio' },
     { name: 'Contact', href: '#contact' }
   ];
 
@@ -46,7 +46,7 @@ const Navbar = () => {
             whileHover={{ scale: 1.05 }}
           >
             <div className="text-white flex flex-col items-center">
-              <div className="text-xl sm:text-2xl font-bold tracking-tight leading-none">DelightX</div>
+              <div className="text-xl sm:text-2xl font-bold tracking-tight leading-none"><a href="">delightX</a></div>
               <div className="text-[8px] sm:text-[10px] font-normal tracking-widest uppercase">MEDIA</div>
             </div>
           </motion.div>
