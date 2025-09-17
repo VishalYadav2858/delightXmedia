@@ -34,7 +34,7 @@ const Contact = () => {
     'YouTube Growth',
     'Brand Deals',
     'Full Service Package',
-    'Consultation'
+    'Others'
   ];
 
   const budgetRanges = [
@@ -50,20 +50,17 @@ const Contact = () => {
     {
       icon: Mail,
       title: 'Email Us',
-      value: 'hello@delightxmedia.com',
-      action: 'mailto:hello@delightxmedia.com'
+      value: 'hello@delightxmedia.in',
     },
     {
       icon: Phone,
       title: 'Call Us',
-      value: '+1 (555) 123-4567',
-      action: 'tel:+15551234567'
+      value: '+91-9867949943',
     },
     {
       icon: MapPin,
       title: 'Visit Us',
-      value: 'Los Angeles, CA',
-      action: '#'
+      value: 'MUMBAI, IN',
     }
   ];
 

@@ -2,7 +2,10 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { ExternalLink, Play, TrendingUp, Users, Eye } from 'lucide-react';
 
-import harshitImg from "../assets/harshit.jpg";
+import har from "../public/assests/har.jpg";       ///Users/vishalyadav/Documents/College/my/my_web/src/public/assests
+import atharva from "../public/assests/atharva.jpg";       ///Users/vishalyadav/Documents/College/my/my_web/src/public/assests
+import ani from "../public/assests/ani.jpg";       ///Users/vishalyadav/Documents/College/my/my_web/src/public/assests
+import parth from "../public/assests/parth.jpg";       ///Users/vishalyadav/Documents/College/my/my_web/src/public/assests
 
 
 
@@ -16,7 +19,7 @@ const Portfolio = () => {
       title: 'Harshit Chauhan',
       category: 'YouTube Channel',
       description: 'Transformed a tech review channel from 10K to 40K subscribers in 8 months',
-      image: 'https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg',
+      image: har,
       link: "https://www.youtube.com/@HarshitChauhan21",
       stats: {
         views: '35M+',
@@ -30,7 +33,7 @@ const Portfolio = () => {
       title: 'Atharva Aggarwal',
       category: 'Youtube Channel',
       description: 'Multi-platform influencer campaign generating 15M+ impressions',
-      image: 'https://images.pexels.com/photos/2887718/pexels-photo-2887718.jpeg',
+      image: atharva,
       link: "https://www.youtube.com/@AtharvaAggarwal",
 
       stats: {
@@ -46,7 +49,7 @@ const Portfolio = () => {
       category: 'Education Channel',
       description: 'Complete rebrand and growth strategy for Ecxam preparation',
       
-      image: 'https://images.pexels.com/photos/442576/pexels-photo-442576.jpeg',
+      image: ani,
       link: "https://www.youtube.com/@DoctorAniGoa",
 
       stats: {
@@ -61,7 +64,7 @@ const Portfolio = () => {
       title: 'Parth Goyal',
       category: 'Education',
       description: 'End-to-end content creation and brand partnership management',
-      image: 'https://images.pexels.com/photos/1181265/pexels-photo-1181265.jpeg',
+      image: parth,
       link: "https://www.youtube.com/@ParthGoyal",
 
       stats: {
