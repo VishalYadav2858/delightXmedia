@@ -33,14 +33,34 @@ const Navbar: React.FC = () => {
     };
   }, [isOpen]);
 
-  // scroll helper — works with ids (#about -> id="about") and selectors
+  // Enhanced scroll helper function
   const scrollToSection = (href: string) => {
-    const id = href.startsWith('#') ? href.slice(1) : href;
-    const el = document.getElementById(id) || document.querySelector(href);
-    if (el) {
-      (el as HTMLElement).scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
+    // Close mobile menu first
     setIsOpen(false);
+    
+    // Allow time for the menu to close before scrolling
+    setTimeout(() => {
+      const id = href.startsWith('#') ? href.slice(1) : href;
+      const el = document.getElementById(id);
+      
+      if (el) {
+        // Calculate the position considering the navbar height
+        const navbarHeight = document.querySelector('nav')?.offsetHeight || 0;
+        const elementPosition = el.getBoundingClientRect().top + window.pageYOffset;
+        const offsetPosition = elementPosition - navbarHeight;
+        
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: "smooth"
+        });
+      }
+    }, 100); // Small delay to allow menu to close
+  };
+
+  // Handle direct anchor link clicks
+  const handleAnchorClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    scrollToSection(href);
   };
 
   return (
@@ -56,14 +76,10 @@ const Navbar: React.FC = () => {
         <div className="flex justify-between items-center h-16">
           <motion.div className="flex items-center space-x-2" whileHover={{ scale: 1.05 }}>
             <div className="text-white flex flex-col items-center">
-              {/* Make logo anchor point to #home and use event to smooth scroll */}
               <div className="text-xl sm:text-2xl font-bold tracking-tight leading-none">
                 <a
                   href="#home"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    scrollToSection('#home');
-                  }}
+                  onClick={(e) => handleAnchorClick(e, '#home')}
                 >
                   delightX
                 </a>
@@ -117,7 +133,7 @@ const Navbar: React.FC = () => {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            className="md:hidden bg-slate-900/98 backdrop-blur-lg border-t border-slate-700/50 z-50"
+            className="md:hidden fixed top-16 left-0 right-0 bg-slate-900/98 backdrop-blur-lg border-t border-slate-700/50 z-50"
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
