@@ -276,7 +276,7 @@ const publicKey = "l7-pyfdAh_QQwrKBt";
               {contactInfo.map((info) => (
                 <motion.a
                   key={info.title}
-                  href={info.action}
+                  // href={info.action}
                   className="flex items-center p-6 bg-slate-800/30 backdrop-blur-sm border border-slate-700/30 rounded-2xl hover:border-slate-600/50 transition-all duration-300 group"
                   whileHover={{ scale: 1.02, x: 10 }}
                 >
