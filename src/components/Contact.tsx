@@ -34,7 +34,7 @@ const Contact = () => {
     'YouTube Growth',
     'Brand Deals',
     'Full Service Package',
-    'Others'
+    'Consultation'
   ];
 
   const budgetRanges = [
@@ -50,17 +50,20 @@ const Contact = () => {
     {
       icon: Mail,
       title: 'Email Us',
-      value: 'hello@delightxmedia.in',
+      value: 'hello@delightxmedia.com',
+      action: 'mailto:hello@mediadelightx@gmail.com'
     },
     {
       icon: Phone,
       title: 'Call Us',
       value: '+91-9867949943',
+      action: 'tel:+919867949943'
     },
     {
       icon: MapPin,
       title: 'Visit Us',
       value: 'MUMBAI, IN',
+      action: '#'
     }
   ];
 
@@ -76,10 +79,9 @@ const Contact = () => {
     setSubmitStatus('idle');
 
     try {
-    const serviceID = "service_5rshmpy";
-const templateID = "template_bhlddtd";
-const publicKey = "l7-pyfdAh_QQwrKBt";
-
+      const serviceID = "service_5rshmpy";
+      const templateID = "template_bhlddtd";
+      const publicKey = "l7-pyfdAh_QQwrKBt";
 
       const templateParams = {
         from_name: data.name,
@@ -92,11 +94,9 @@ const publicKey = "l7-pyfdAh_QQwrKBt";
 
       await emailjs.send(serviceID, templateID, templateParams, publicKey);
 
-      console.log('Email sent successfully:', data);
       setSubmitStatus('success');
       reset();
     } catch (error) {
-      console.error('Email sending error:', error);
       setSubmitStatus('error');
     } finally {
       setIsSubmitting(false);
@@ -276,7 +276,7 @@ const publicKey = "l7-pyfdAh_QQwrKBt";
               {contactInfo.map((info) => (
                 <motion.a
                   key={info.title}
-                  // href={info.action}
+                  href={info.action}
                   className="flex items-center p-6 bg-slate-800/30 backdrop-blur-sm border border-slate-700/30 rounded-2xl hover:border-slate-600/50 transition-all duration-300 group"
                   whileHover={{ scale: 1.02, x: 10 }}
                 >
@@ -291,6 +291,7 @@ const publicKey = "l7-pyfdAh_QQwrKBt";
               ))}
             </div>
 
+            {/*
             <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-3xl p-8">
               <h4 className="text-xl font-bold text-white mb-6">
                 Follow Our Journey
@@ -312,6 +313,8 @@ const publicKey = "l7-pyfdAh_QQwrKBt";
                 Stay updated with our latest work and industry insights
               </p>
             </div>
+            */}
+
           </motion.div>
         </div>
       </div>
