@@ -1,7 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { 
-  Zap, 
   Mail, 
   Phone, 
   MapPin,
@@ -28,7 +27,6 @@ const Footer = () => {
     'Brand Deals',
     'Content Strategy',
     'Something Else'
-    
   ];
 
   const socialLinks = [
@@ -86,15 +84,26 @@ const Footer = () => {
               >
                 <div className="flex items-center text-gray-400">
                   <Mail className="w-4 h-4 mr-3 text-blue-400" />
-                  hello@delightxmedia.in
+                  <a href="mailto:hello@delightxmedia.in" className="hover:text-blue-400 transition-colors">
+                    mediadelightx@gmail.com
+                  </a>
                 </div>
                 <div className="flex items-center text-gray-400">
                   <Phone className="w-4 h-4 mr-3 text-blue-400" />
-                  +91-9867949943
+                  <a href="tel:+919867949943" className="hover:text-blue-400 transition-colors">
+                    +91-9867949943
+                  </a>
                 </div>
                 <div className="flex items-center text-gray-400">
                   <MapPin className="w-4 h-4 mr-3 text-blue-400" />
-                  Mumbai, IN
+                  <a
+                    href="https://www.google.com/maps/search/?api=1&query=Mumbai,IN"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-blue-400 transition-colors"
+                  >
+                    Mumbai, IN
+                  </a>
                 </div>
               </motion.div>
             </div>
@@ -201,7 +210,8 @@ const Footer = () => {
                 </motion.button>
               </motion.div>
 
-              {/* Social Links */}
+              {/* Social Links (Commented Out) */}
+              {/*
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -223,6 +233,7 @@ const Footer = () => {
                   ))}
                 </div>
               </motion.div>
+              */}
             </div>
           </div>
         </div>
