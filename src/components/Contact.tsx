@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useForm } from 'react-hook-form';
 import emailjs from 'emailjs-com';
+
 import {
   Mail,
   Phone,
@@ -12,6 +13,7 @@ import {
   Instagram,
   Youtube
 } from 'lucide-react';
+import { FaWhatsapp } from 'react-icons/fa';
 
 interface FormData {
   name: string;
@@ -50,12 +52,12 @@ const Contact = () => {
     {
       icon: Mail,
       title: 'Email Us',
-      value: 'hello@delightxmedia.com',
-      action: 'mailto:hello@mediadelightx@gmail.com'
+      value: 'mediadelightx@gmail.com',
+      action: 'mailto:mediadelightx@gmail.com'
     },
     
      {
-      icon: Phone,  // you can switch to a WhatsApp icon if you want
+      icon: FaWhatsapp,  // you can switch to a WhatsApp icon if you want
       title: 'WhatsApp Us',
       value: '+91-9867949943',
       action: 'https://wa.me/919867949943?text=Hello%20DelightX%20Team!%20I%20want%20to%20discuss%20a%20project.'
