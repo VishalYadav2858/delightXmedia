@@ -2,15 +2,15 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useForm } from 'react-hook-form';
 import emailjs from 'emailjs-com';
-import { 
-  Mail, 
-  Phone, 
-  MapPin, 
-  Send, 
-  Linkedin, 
-  Twitter, 
-  Instagram, 
-  Youtube 
+import {
+  Mail,
+  Phone,
+  MapPin,
+  Send,
+  Linkedin,
+  Twitter,
+  Instagram,
+  Youtube
 } from 'lucide-react';
 
 interface FormData {
@@ -25,12 +25,12 @@ interface FormData {
 const Contact = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
-  
+
   const { register, handleSubmit, formState: { errors }, reset } = useForm<FormData>();
 
   const services = [
     'Video Editing',
-    'Influencer Management', 
+    'Influencer Management',
     'YouTube Growth',
     'Brand Deals',
     'Full Service Package',
@@ -39,7 +39,7 @@ const Contact = () => {
 
   const budgetRanges = [
     '$1K - $5K',
-    '$5K - $10K', 
+    '$5K - $10K',
     '$10K - $25K',
     '$25K - $50K',
     '$50K+',
@@ -53,12 +53,14 @@ const Contact = () => {
       value: 'hello@delightxmedia.com',
       action: 'mailto:hello@mediadelightx@gmail.com'
     },
-    {
-      icon: Phone,
-      title: 'Call Us',
+    
+     {
+      icon: Phone,  // you can switch to a WhatsApp icon if you want
+      title: 'WhatsApp Us',
       value: '+91-9867949943',
-      action: 'tel:+919867949943'
+      action: 'https://wa.me/919867949943?text=Hello%20DelightX%20Team!%20I%20want%20to%20discuss%20a%20project.'
     },
+
     {
       icon: MapPin,
       title: 'Visit Us',
@@ -158,7 +160,7 @@ const Contact = () => {
                       Email Address *
                     </label>
                     <input
-                      {...register('email', { 
+                      {...register('email', {
                         required: 'Email is required',
                         pattern: {
                           value: /^\S+@\S+$/i,
