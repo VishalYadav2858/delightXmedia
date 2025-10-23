@@ -2,11 +2,11 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { ExternalLink, Play, TrendingUp, Users, Eye } from 'lucide-react';
 
-import har from "../public/assests/har.jpg";       ///Users/vishalyadav/Documents/College/my/my_web/src/public/assests
+import gazi from "../public/assests/gazi.jpg";       ///Users/vishalyadav/Documents/College/my/my_web/src/public/assests
 import atharva from "../public/assests/atharva.jpg";       ///Users/vishalyadav/Documents/College/my/my_web/src/public/assests
-import ani from "../public/assests/ani.jpg";       ///Users/vishalyadav/Documents/College/my/my_web/src/public/assests
+import dose from "../public/assests/dose.jpg";       ///Users/vishalyadav/Documents/College/my/my_web/src/public/assests
 import parth from "../public/assests/parth.jpg";       ///Users/vishalyadav/Documents/College/my/my_web/src/public/assests
-
+// import gazi from "../public/assests/gazi.jpg";       ///Users/vishalyadav/Documents/College/my/my_web/src/public/assests
 
 
 
@@ -16,14 +16,14 @@ const Portfolio = () => {
   const projects = [
     {
       id: 1,
-      title: 'Harshit Chauhan',
+      title: 'gazi ',
       category: 'YouTube Channel',
-      description: 'Transformed a tech review channel from 10K to 40K subscribers in 8 months',
-      image: har,
-      link: "https://www.youtube.com/@HarshitChauhan21",
+      description: 'Transformed a tech  channel from 10K to K subscribers in 8 months',
+      image: gazi,
+      link: "https://www.youtube.com/@gaziai/featured",
       stats: {
         views: '35M+',
-        subscribers: '40K+',
+        subscribers: '189K+',
         growth: '+490%'
       },
       services: ['Influencer Management', 'Content Strategy', 'Brand Partnerships']
@@ -45,16 +45,16 @@ const Portfolio = () => {
     },
     {
       id: 3,
-      title: 'Doctor Ani',
+      title: ' Dose of Devy',
       category: 'Education Channel',
       description: 'Complete rebrand and growth strategy for Ecxam preparation',
       
-      image: ani,
-      link: "https://www.youtube.com/@DoctorAniGoa",
+      image: dose,
+      link: "https://www.youtube.com/@doseofdevy/featured",
 
       stats: {
         views: '4M+',
-        subscribers: '15K+',
+        subscribers: '30K+',
         revenue: '+300%'
       },
       services: ['Video Editing', 'Brand Development', 'Monetization Strategy']
