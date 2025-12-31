@@ -52,8 +52,8 @@ const Contact = () => {
     {
       icon: Mail,
       title: 'Email Us',
-      value: 'mediadelightx@gmail.com',
-      action: 'mailto:mediadelightx@gmail.com'
+      value: 'contact@delightxmedia.in',
+      action: 'mailto:contact@delightxmedia.in'
     },
     
      {
