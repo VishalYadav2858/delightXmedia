@@ -56,12 +56,12 @@ const Contact = () => {
       action: 'mailto:contact@delightxmedia.in'
     },
     
-     {
-      icon: FaWhatsapp,  // you can switch to a WhatsApp icon if you want
-      title: 'WhatsApp Us',
-      value: '+91-9867949943',
-      action: 'https://wa.me/919867949943?text=Hello%20DelightX%20Team!%20I%20want%20to%20discuss%20a%20project.'
-    },
+    //  {
+    //   icon: FaWhatsapp,  // you can switch to a WhatsApp icon if you want
+    //   title: 'WhatsApp Us',
+    //   value: '+91-9867949943',
+    //   action: 'https://wa.me/919867949943?text=Hello%20DelightX%20Team!%20I%20want%20to%20discuss%20a%20project.'
+    // },
 
     {
       icon: MapPin,
