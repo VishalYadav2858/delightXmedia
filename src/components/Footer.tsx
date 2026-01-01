@@ -88,12 +88,12 @@ const Footer = () => {
                     contact@delightxmedia.in
                   </a>
                 </div>
-                <div className="flex items-center text-gray-400">
+                {/* <div className="flex items-center text-gray-400">
                   <Phone className="w-4 h-4 mr-3 text-blue-400" />
                   <a href="tel:+919867949943" className="hover:text-blue-400 transition-colors">
                     +91-9867949943
                   </a>
-                </div>
+                </div> */}
                 <div className="flex items-center text-gray-400">
                   <MapPin className="w-4 h-4 mr-3 text-blue-400" />
                   <a
